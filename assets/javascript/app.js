@@ -1,5 +1,5 @@
 
-var topics = ["kitten", "otter", "dog", "bunny" , "moose", "mouse", "alien"];
+var topics = ["kitten", "otter", "dog", "bunny" , "moose", "mouse", "gazelle", "goat", "deer", "bear", "fox", "panda", "alien"];
 var numberOfGifs = 10;
 var maxRating = "PG";
 
