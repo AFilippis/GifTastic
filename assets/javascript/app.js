@@ -9,9 +9,8 @@ function renderBtns() {
     //Create buttons based on elements in array
     for (var i = 0; i < topics.length; i++) {
         var newBtn = $('<button>');
-        newBtn.attr('data-name', topics[i]);
-        newBtn.addClass('gif');
-        newBtn.addClass('topicBtn')
+        newBtn.attr('dataName', topics[i]);
+        newBtn.addClass('topicBtn');
         newBtn.addClass('btn');
         newBtn.text(topics[i]);
         $('#btnContainer').append(newBtn);
@@ -50,8 +49,8 @@ function addGifsToContainer(show) {
             var newImage = $("<img src = '" + element.images.fixed_height_still.url + "'>");
             newImage.addClass("gifImage");
             newImage.attr("state", "still");
-            newImage.attr("still-data", element.images.fixed_height_still.url);
-            newImage.attr("animated-data", element.images.fixed_height.url);
+            newImage.attr("stillData", element.images.fixed_height_still.url);
+            newImage.attr("animatedData", element.images.fixed_height.url);
             newDiv.append(newImage);
             $("#gifContainer").append(newDiv);
         });
@@ -60,11 +59,11 @@ function addGifsToContainer(show) {
         $(".gifImage").on("click", function () {
             if ($(this).attr("state") === "still") {
                 $(this).attr("state", "animated");
-                $(this).attr("src", $(this).attr("animated-data"));
+                $(this).attr("src", $(this).attr("animatedData"));
             }
             else {
                 $(this).attr("state", "still");
-                $(this).attr("src", $(this).attr("still-data"));
+                $(this).attr("src", $(this).attr("stillData"));
             }
         });
     });
