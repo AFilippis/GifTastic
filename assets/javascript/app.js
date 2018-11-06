@@ -79,8 +79,11 @@ $(document).ready(function () {
     renderBtns();
     $("#submitBtn").on("click", function () {
         event.preventDefault();
+        var input = $("#randomInput").val().trim();
         addBtn($("#randomInput").val().trim());
         $("#randomInput").val("");
+
+        console.log(input + " entered and added");
     });
 });
 
