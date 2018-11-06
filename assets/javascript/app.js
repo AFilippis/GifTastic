@@ -24,6 +24,7 @@ $(document).ready(function () {
             populateGIFContainer($(this).text());
         });
     };
+
     function addBtn() {
         var input = $('#randomInput').val().trim();
         topics.push(input);
@@ -40,7 +41,7 @@ $(document).ready(function () {
     function addGifsToContainer() {
         $.ajax({
             url: "https://api.giphy.com/v1/gifs/search?q=" + show +
-                "&api_key=Yzx8vjOJIoMqPNi0M0sKl3K8hbapqLEp&rating=" + cutOffRating + "&limit=" + numberOfGifs,
+                "&api_key=Yzx8vjOJIoMqPNi0M0sKl3K8hbapqLEp&rating=" + maxRating + "&limit=" + numberOfGifs,
             method: "GET"
         }).then(function (response) {
             response.data.forEach(function (element) {
