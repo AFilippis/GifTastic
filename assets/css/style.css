@@ -1,3 +1,8 @@
 #btnContainer > .btn {
     margin: 1em;
 }
+
+.smallGifContainer{
+	float: left;
+	margin: 2vh 3vw 2vh 3vw;
+}
