@@ -35,12 +35,14 @@ function addBtn(show) {
 
 
 
-function addGifsToContainer() {
+function addGifsToContainer(show) {
     $.ajax({
         url: "https://api.giphy.com/v1/gifs/search?q=" + show +
             "&api_key=Yzx8vjOJIoMqPNi0M0sKl3K8hbapqLEp&rating=" + maxRating + "&limit=" + numberOfGifs,
         method: "GET"
     }).then(function (response) {
+        console.log(response + " data recieved")
+
         response.data.forEach(function (element) {
             newDiv = $("<div>");
             newDiv.addClass("smallGifContainer");
